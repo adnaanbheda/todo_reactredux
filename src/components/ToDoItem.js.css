@@ -1,0 +1,6 @@
+.item{
+    border-bottom: '2px #575757 gray';
+    padding: '10px 20px';
+    margin: '10px';
+    cursor: 'pointer';
+}
