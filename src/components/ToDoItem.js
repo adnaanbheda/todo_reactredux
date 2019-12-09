@@ -2,6 +2,22 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { toggleToDo } from '../actions/index';
 import "./ToDoItem.js.css";
+
+const style = {
+    // borderBottom: '2px solid rgb(237, 237, 237) ',
+    // padding: '10px 20px',
+    // margin: '10px',
+    cursor: 'pointer',
+    fontSize: '32px',
+    color: 'gray'
+}
+const iconStyle = {
+    borderRadius: "50%",
+    border: '0.5px #4d4d4d black',
+    color: '#5DC2AF',
+    margin: '5px',
+    borderColor: '#'
+}
 class ToDoItem extends Component {
     //State to manage strikethrough on hover
     state = {
@@ -21,14 +37,24 @@ class ToDoItem extends Component {
             //MouseOver -> brings strikethrough transition
             //MouseLeave -> removes strikethrough transition
             //HandleClick -> Dispatches the ToggleToDo Action
-            <div
-                className="item collection-item"
+            <li
+                className=" item"
                 onClick={() => { this.handleClick() }}
                 onMouseOver={() => this.mouseOver()}
                 onMouseLeave={() => this.mouseLeave()}
-                style={{ textDecoration: this.state.hover || this.props.completed ? 'line-through' : null }}>
+                style={{ ...style, textDecoration: this.state.hover || this.props.completed ? 'line-through' : null }}>
+                {(() => {
+                    if (this.props.completed) {
+                        return <i style={iconStyle} className="material-icons ">check_circle</i>
+                    }
+                    else {
+                        return <i style={iconStyle} className="material-icons ">done_outline</i>
+
+                    }
+                })()
+                }
                 {this.props.text}
-            </div>
+            </li>
         );
     }
 }
