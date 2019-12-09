@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Screenshot
+
 [![Screenshot](https://i.postimg.cc/R0SrSSTk/basic-Todo.jpg)](https://postimg.cc/870XwV94)
 
 ## Available Scripts
