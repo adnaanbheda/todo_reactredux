@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Screenshot
 
-[![Screenshot](https://i.postimg.cc/R0SrSSTk/basic-Todo.jpg)](https://postimg.cc/870XwV94)
+[![todo.jpg](https://i.postimg.cc/V6hqTMGS/todo.jpg)](https://postimg.cc/N9122ywY)
 
 ## Available Scripts
 
