@@ -39,7 +39,7 @@ class App extends Component {
             onKeyPress={(e) => { if (e.key === 'Enter') { this.handleSubmit(e) } }}
             placeholder="What needs to be done?"
             placeholderStyle={{ fontStyle: 'italic' }}
-            style={{ margin: '25px 25px', padding: '10px', fontSize: '32px', fontStyle: 'italic', color: 'dark-gray' }}
+            style={{ marginBottom: '25px', padding: '10px', fontSize: '32px', fontStyle: 'italic', color: 'dark-gray' }}
           />
 
           <TodoList

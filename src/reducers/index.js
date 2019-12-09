@@ -4,12 +4,12 @@ let todo_id = 2;
 const initialState = [
     {
         id: 0,
-        text: 'Consider using Redux',
+        text: 'Check my emails',
         completed: true
     },
     {
         id: 1,
-        text: 'Keep all state in a single tree',
+        text: 'Read a book',
         completed: false
     }
 ]
