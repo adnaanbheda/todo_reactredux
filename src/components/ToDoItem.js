@@ -8,7 +8,6 @@ class ToDoItem extends Component {
         hover: false
     }
     handleClick(e) {
-        console.log("Click")
         this.props.toggleToDo(this.props.id);
     }
     mouseOver() {
@@ -18,7 +17,6 @@ class ToDoItem extends Component {
         this.setState({ hover: false })
     }
     render() {
-        console.log(this.props);
         return (
             //MouseOver -> brings strikethrough transition
             //MouseLeave -> removes strikethrough transition
