@@ -1,4 +1,6 @@
-let nextTodoId = 2;
+//Counter for creating ids for todos
+let todo_id = 2;
+//Initial State with 2 Todos, one complete and one incomplete
 const initialState = [
     {
         id: 0,
@@ -18,7 +20,7 @@ export default function rootReducer(state = initialState, action) {
     switch (action.type) {
 
         case 'PUSH_TODO':
-            return [...state, { id: nextTodoId++, text: action.payload.text, completed: false }]
+            return [...state, { id: todo_id++, text: action.payload.text, completed: false }]
         case 'TOGGLE_TODO':
             return state.map(todo =>
                 todo.id === action.payload.id ? { ...todo, completed: !todo.completed } : todo)

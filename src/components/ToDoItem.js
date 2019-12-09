@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { toggleToDo } from '../actions/index';
 import "./ToDoItem.js.css";
 class ToDoItem extends Component {
+    //State to manage strikethrough on hover
     state = {
         hover: false
     }
@@ -19,6 +20,9 @@ class ToDoItem extends Component {
     render() {
         console.log(this.props);
         return (
+            //MouseOver -> brings strikethrough transition
+            //MouseLeave -> removes strikethrough transition
+            //HandleClick -> Dispatches the ToggleToDo Action
             <div
                 className="item collection-item"
                 onClick={() => { this.handleClick() }}
@@ -31,11 +35,11 @@ class ToDoItem extends Component {
     }
 }
 
-
+//ToggleToDo action creator is passed to props
 const mapDispatchToProps = (dispatch) => {
     return {
         toggleToDo: (id) => dispatch(toggleToDo(id))
     }
 };
-
+//Higher Order Component
 export default connect(null, mapDispatchToProps)(ToDoItem);
